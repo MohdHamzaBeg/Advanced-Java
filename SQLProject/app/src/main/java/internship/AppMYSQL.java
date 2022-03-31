@@ -17,7 +17,7 @@ public class AppMYSQL {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String db = "jdbc:mysql//root@localhost:3306/Internship";
+		String db = "jdbc:mysql://localhost:3306/internship?serverTimezone=UTC";
 		var c = DriverManager.getConnection(db,"root", "Hamza221230."); // Here c is variable which contains connection
 													// to our FirstDB database
 		System.out.println(c);
