@@ -2,9 +2,9 @@ package Internship;
 
 import java.util.Optional;
 
-public interface Dao<T> {
-	void save(T t);
-	Optional<T> finallyId(int id);
-	void update (T t);
-	void delete (T t);
+public interface Dao <User>{
+	void save(User t);
+	void update (User t);
+	void delete (User t);
+	Optional findbyId(int id);
 }
