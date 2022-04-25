@@ -14,26 +14,25 @@ public class App {
 		UserDao userdao = new UserDao();
 
 		// Saving Users
-		// ud.save(new User("Java"));
-		// ud.save(new User("Python"));
+		// userdao.save(new User("Java"));
+		// userdao.save(new User("Python"));
 
 		// Retrieving a user by id
 		var users = userdao.findbyId(3);
 		if (users.isPresent()) {
-			Object u=users.get();
+			Object u = users.get();
 			System.out.println("Retrieved " + users);
+
+			// Updating user
 			((User) u).setName("MYSQL");
 			userdao.update(u);
 		} else {
 			System.out.println("No user retrieved");
 		}
-		
+
 		// Deleting a user
-		userdao.delete(new User(3,null));
-		
-		
-		
-		
+		userdao.delete(new User(3, null));
+
 		a.disconnect();
 		System.out.println("Database is disconnected now");
 	}
